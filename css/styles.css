@@ -203,7 +203,7 @@ main styling
     justify-content: center;
     color: var(--prmy-color);
     align-items: center;
-    font-size: calc(4.5vw + .8rem);
+    font-size: calc(2.7vw + .8rem);
     flex-grow: 1;
     text-wrap: nowrap;
  }
@@ -213,14 +213,9 @@ main #message svg{
     display: inline-block;
     height: 1.3em;
     width: auto;
-    vertical-align: -10%;
+    vertical-align: -12%;
     
 } 
 main #message p{
     display: inline-block;
 }
-main svg{
-    height: calc(4vw + .8rem);
-    width: auto;
-    vertical-align: -8%;
- }
