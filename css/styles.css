@@ -132,7 +132,7 @@ side-bar styling
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 80px;
+    gap: 60px;
     z-index: 999;
     backdrop-filter: blur(26px);
     -webkit-backdrop-filter: blur(26px);
