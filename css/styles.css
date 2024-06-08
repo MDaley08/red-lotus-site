@@ -34,8 +34,8 @@ General styling
 
 :root{
     --prmy-color: rgb(201, 2, 58);
-    --bg-color: rgb(36, 40, 48);
-    --font-color: rgb(197, 198, 209);
+    --bg-color: rgb(16, 19, 41);
+    --font-color: rgba(198, 201, 228, 0.92);
     --nav-bg-color: rgba(24, 27, 32, 0.205);
 }
 
@@ -233,6 +233,7 @@ header #message p{
 }
 
 header #header-icon{
+    pointer-events: none;
     position: relative;
     top:0;
     height: min(85vw, 500px);
