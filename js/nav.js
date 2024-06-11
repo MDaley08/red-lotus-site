@@ -1,10 +1,26 @@
 const menuManager = (() => {
-    const navMenu = document.querySelector('.dropdown');
+    const navbar = document.querySelector('default-nav');
+    const dropdownMenu = document.querySelector('.dropdown');
     const hamburgerDiv = document.querySelector('.hamburger');
 
     hamburgerDiv.addEventListener('click', () => {
         hamburgerDiv.classList.toggle('hamburger-open');
-        navMenu.classList.toggle('dropdown-open');
+        dropdownMenu.classList.toggle('dropdown-open');
+    });
+
+    let lastScrollVal;
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        let currScrollVal = window.scrollY;
+        if(currScrollVal  > lastScrollVal ){
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => navbar.classList.add('hideNav'), 80);
+        }
+        else{
+            navbar.classList.remove('hideNav');
+            clearTimeout(scrollTimeout);
+        }
+        lastScrollVal = currScrollVal;
     });
 
 })();

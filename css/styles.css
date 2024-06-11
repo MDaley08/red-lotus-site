@@ -90,7 +90,7 @@ default-nav{
     -webkit-backdrop-filter: blur(20px);
     padding: 10px 40px;
     z-index: 999;
-    transition: all .5s ease-in-out
+    transition: all .5s ease-in-out;
 }
 
 default-nav img{
@@ -119,8 +119,7 @@ default-nav a{
     font-size: 1.1rem;
 }
 
-default-nav a:hover, 
-default-nav a:focus{
+default-nav a:hover{
     color: var(--prmy-color);
 }
 
@@ -148,7 +147,7 @@ Hamburger button styling
 ---------------------------------- 
  */
 
-default-nav .bar{
+.bar{
     background-color: var(--font-color);
     height: 3px;
     width: 32px;
@@ -157,7 +156,7 @@ default-nav .bar{
     transition: all 1s;
 }
 
-default-nav .hamburger{
+.hamburger{
     display: none;
     position:absolute;
     top:0;
@@ -165,11 +164,11 @@ default-nav .hamburger{
     transition: scale .5s
  }
 
- default-nav .hamburger:hover{
+.hamburger:hover{
     scale: 1.1 1.1;
  }
 
- default-nav .hamburger:hover *{
+.hamburger:hover *{
     background-color: var(--prmy-color);
  }
 
@@ -200,7 +199,6 @@ default-nav .hamburger{
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
     }
-
     default-nav .main{
         display: none;
     }
@@ -216,11 +214,15 @@ default-nav .hamburger{
         transition: all .9s ease-in-out;
     }
 
-    default-nav .hamburger{
+    .hamburger{
         display: block;
         position: absolute;
         top: 38px;
         right: 30px;
+    }
+
+    html{
+        font-size: calc(1vw + 0.6rem);
     }
 
 }
@@ -236,32 +238,14 @@ header{
     align-items: center;
     color: var(--prmy-color);
     font-size: calc(2.7vw + .8rem);
-    text-wrap: nowrap;
-    flex-grow: 1;
-    height: 95vh;
-}
-header #message{
-    margin-bottom: 7%;
-}
-
-header #message svg{
-    fill: var(--prmy-color);
-    display: inline-block;
-    height: 1.3em;
-    width: auto;
-    vertical-align: -12%;
-    
-} 
-header #message p{
-    display: inline-block;
+    height: 93vh;
 }
 
 header #header-icon{
     position: relative;
     top:0;
-    height: min(85vw, 500px);
-    width: min(85vw, 500px);
-    margin-bottom: 5%;
+    height: min(70vw, 400px);
+    width: min(70vw, 400px);
 }
 
 #header-icon #frame{
@@ -273,6 +257,10 @@ header #header-icon{
     transition: all 3s ease-in-out;
 }
 
+#header-icon #frame:hover{
+    transform: rotate(90deg);
+}
+
 #header-icon #flower{
     position: absolute;
     top:23%;
@@ -281,9 +269,20 @@ header #header-icon{
     width: auto;
 }
 
-#header-icon #frame:hover{
-    transform: rotate(90deg);
+header h1{
+    font-size: 4.4rem;
 }
+
+header p{
+    font-family: juice;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--font-color);
+    text-align: center;
+    height:100px;
+    width: min(85vw, 800px)
+}
+
 
 main{
     background-color: var(--bg-color);
@@ -304,7 +303,23 @@ main #message svg{
     
 } 
 
+main #message{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7%;
+}
 
+main #message svg{
+    fill: var(--prmy-color);
+    display: inline-block;
+    height: 1.3em;
+    width: auto;
+    vertical-align: -12%;
+    
+} 
+main #message p{
+    display: inline-block;
+}
 main .about{
     display: flex;
     flex-direction: column;
@@ -320,29 +335,6 @@ main .about p{
     width: 100%;
 }
 
-@keyframes slideIn{
-    0%{
-        transform: translateX(-100%);
-    }
-    100%{
-        transform: translateX(0%);
-    }
-}
-
-@keyframes spin{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform:rotate(180deg);
-    }
-}
-
-@keyframes fadeIn{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+.hideNav{
+    transform: translateY(-100%);
 }
