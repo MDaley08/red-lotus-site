@@ -8,13 +8,13 @@ const menuManager = (() => {
         dropdownMenu.classList.toggle('dropdown-open');
     });
 
-    let lastScrollVal;
+    let lastScrollVal = window.scrollY;
     let scrollTimeout;
     window.addEventListener('scroll', () => {
         let currScrollVal = window.scrollY;
         if(currScrollVal  > lastScrollVal ){
             clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => navbar.classList.add('hideNav'), 80);
+            scrollTimeout = setTimeout(() => navbar.classList.add('hideNav'), 70);
         }
         else{
             navbar.classList.remove('hideNav');
