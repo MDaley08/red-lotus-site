@@ -327,7 +327,7 @@ main{
     align-items: center;
     background-color: var(--nav-bg-color-opaque);
     border-radius: 10px;
-    border: 3px solid rgb(12, 18, 36);
+    box-shadow: 1px 1px 20px rgb(9, 14, 27);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 40px min(100px,10%);
