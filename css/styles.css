@@ -34,10 +34,10 @@ General styling
 
 :root{
     --prmy-color: rgb(201, 2, 58);
-    --bg-color: hsl(224, 50%, 12%);
-    --font-color: rgb(209, 218, 245);
-    --nav-bg-color-solid: rgba(12, 18, 34, 0.965);
-    --nav-bg-color-opaque: rgba(12, 18, 34, 0.5);
+    --bg-color: rgb(15, 23, 46);
+    --font-color: rgb(186, 196, 226);
+    --nav-bg-color-solid: rgba(15, 23, 46, 0.965);
+    --nav-bg-color-opaque: rgba(15, 23, 46, 0.65);
 }
 
 html::-webkit-scrollbar{ 
@@ -93,7 +93,7 @@ nav-bar styling
 ---------------------------------- 
  */
 
-default-nav{
+nav{
     display: flex;
     position: fixed;
     top:0;
@@ -107,20 +107,20 @@ default-nav{
     width: 100%;
 }
 
-default-nav img{
+nav img{
     height: 67px;
     width: auto;
     cursor: pointer;
     vertical-align: middle;
 }
 
-default-nav a{
+nav a{
     height: 100%;
     transition: all .5s;
     font-size: 1.1rem;
 }
 
-default-nav a:hover{
+nav a:hover{
     color: var(--prmy-color);
 }
 .menu{
@@ -192,7 +192,7 @@ Hamburger button styling
 
 
 @media(max-width:800px){
-    default-nav{
+    nav{
         background-color: var(--nav-bg-color-solid);
         flex-direction: column;
         align-items: center;
@@ -295,13 +295,24 @@ main{
     justify-content: center;
     color: var(--prmy-color);
     font-size: calc(2.7vw + .8rem);
-    height: 100vh;
     align-self: center;
-    border-radius: 20px;
+    margin-bottom: 10%;
+ }
+
+ main ul{
+    font-family: 'Juice';
+    font-size:1.5rem;
+    align-self: flex-start;
+    margin-bottom: 30px;
  }
 
  main h1{
-    font-size: 4rem;
+    font-size: 3.2rem;
+    align-self: center;
+ }
+
+ main h1 + *{
+    color:var(--font-color)
  }
 
 #message{
@@ -315,17 +326,39 @@ main{
     flex-direction: column;
     align-items: center;
     background-color: var(--nav-bg-color-opaque);
+    border-radius: 10px;
+    border: 3px solid rgb(12, 18, 36);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 40px min(400px,10%);
+    padding: 40px min(100px,10%);
+    width: 75%;
 
 }
 .about p{
     font-family: 'Juice';
     color: var(--font-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
     text-align: center;
-    font-size: 1.25rem;
-    width: 100%;
+}
+
+@media(max-width: 500px){
+    main h1{
+        font-size: 2.2rem;
+    }
+}
+
+@media(max-width:1200px){
+    .about{
+        width: 100%;
+        border-radius: 0;
+    }
+    .about p{
+        font-size: .7em;
+    }
+    .about ul{
+        font-size: 1.3rem;
+    }
 }
 
 @keyframes fadeIn{

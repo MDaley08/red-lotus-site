@@ -1,5 +1,5 @@
 const menuManager = (() => {
-    const navbar = document.querySelector('default-nav');
+    const navbar = document.querySelector('nav');
     const dropdownMenu = document.querySelector('.dropdown');
     const hamburgerDiv = document.querySelector('.hamburger');
 
